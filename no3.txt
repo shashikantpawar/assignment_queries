@@ -1,0 +1,54 @@
+SQL> select d.dname as department_name,count(e.empno) as no_of_employee
+  2  from department d, employee e
+  3  where d.deptno=e.deptno
+  4  group by(d.dname);
+
+----------------------------------------------------------------------------
+
+SQL> select * from employee;
+
+     EMPNO ENAME                JOB               MGR HIREDATE      SALARY
+---------- -------------------- ---------- ---------- --------- ----------
+    DEPTNO
+----------
+         1 raja                 sse                   03-MAR-17      50000
+        10
+
+         2 sam                  mgmt                  03-MAR-17     100000
+        20
+
+         3 james                jse                 1 03-MAR-17      30000
+        30
+
+
+     EMPNO ENAME                JOB               MGR HIREDATE      SALARY
+---------- -------------------- ---------- ---------- --------- ----------
+    DEPTNO
+----------
+         4 jack                 jse                 1 03-MAR-17      30000
+        30
+
+         5 rohds                sse                 2 03-MAR-17      60000
+        20
+
+
+SQL> select * from department;
+
+    DEPTNO DNAME      LOCATION
+---------- ---------- --------------------
+        10 developer  pune
+        20 manager    pune
+        30 designer   mumbai
+
+SQL> select d.dname as department_name,count(e.empno) as no_of_employee
+  2  from department d, employee e
+  3  where d.deptno=e.deptno
+  4  group by(d.dname);
+
+DEPARTMENT NO_OF_EMPLOYEE
+---------- --------------
+developer               1
+manager                 2
+designer                2
+
+SQL>

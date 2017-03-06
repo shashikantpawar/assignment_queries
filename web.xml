@@ -1,0 +1,18 @@
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+ 
+  
+  <servlet>
+  	<servlet-name>register</servlet-name>
+  	<servlet-class>com.nt.controller.RegistrationController</servlet-class>
+  	<load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>register</servlet-name>
+  		<url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>  
+  </welcome-file-list>
+</web-app>
